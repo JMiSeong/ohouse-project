@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="780" viewBox="0 0 1400 780" role="img" aria-labelledby="title desc">
+  <title id="title">오늘의집 클론 프로젝트 기술 스택</title>
+  <desc id="desc">사용 언어, 웹 기술, 데이터베이스, 라이브러리와 드라이버를 정리한 기술 스택 이미지</desc>
+  <defs>
+    <style>
+      .title{font:800 42px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#111827}
+      .subtitle{font:400 18px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#64748b}
+      .label{font:750 16px Arial,sans-serif;fill:#0877cf;letter-spacing:1.4px}
+      .group-title{font:750 25px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#111827}
+      .tag{font:650 17px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#374151}
+      .tag-blue{font:700 17px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#0877cf}
+      .detail{font:400 14px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#64748b}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#0f172a" flood-opacity="0.09"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="780" fill="#ffffff"/>
+  <rect x="60" y="54" width="10" height="92" fill="#1496f4"/>
+  <text x="96" y="98" class="title">기술 스택</text>
+  <text x="96" y="132" class="subtitle">오늘의집 클론 프로젝트 · JSP/Servlet 기반 웹 애플리케이션</text>
+
+  <!-- Languages -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="190" width="610" height="235" rx="6" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="70" y="190" width="610" height="8" rx="4" fill="#1496f4"/>
+  </g>
+  <text x="102" y="240" class="label">LANGUAGES</text>
+  <text x="102" y="282" class="group-title">사용 언어</text>
+  <rect x="102" y="314" width="92" height="42" rx="21" fill="#eef7ff"/><text x="128" y="341" class="tag-blue">Java</text>
+  <rect x="206" y="314" width="126" height="42" rx="21" fill="#f5f5f5"/><text x="228" y="341" class="tag">JavaScript</text>
+  <rect x="344" y="314" width="94" height="42" rx="21" fill="#f5f5f5"/><text x="365" y="341" class="tag">HTML5</text>
+  <rect x="450" y="314" width="86" height="42" rx="21" fill="#f5f5f5"/><text x="472" y="341" class="tag">CSS3</text>
+  <rect x="548" y="314" width="72" height="42" rx="21" fill="#eef7ff"/><text x="568" y="341" class="tag-blue">SQL</text>
+  <text x="102" y="394" class="detail">화면 구성부터 서버 로직과 데이터 질의까지 구현</text>
+
+  <!-- Web -->
+  <g filter="url(#shadow)">
+    <rect x="720" y="190" width="610" height="235" rx="6" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="720" y="190" width="610" height="8" rx="4" fill="#1496f4"/>
+  </g>
+  <text x="752" y="240" class="label">WEB TECHNOLOGY</text>
+  <text x="752" y="282" class="group-title">웹 애플리케이션</text>
+  <rect x="752" y="314" width="78" height="42" rx="21" fill="#eef7ff"/><text x="775" y="341" class="tag-blue">JSP</text>
+  <rect x="842" y="314" width="100" height="42" rx="21" fill="#f5f5f5"/><text x="861" y="341" class="tag">Servlet</text>
+  <rect x="954" y="314" width="82" height="42" rx="21" fill="#f5f5f5"/><text x="976" y="341" class="tag">JSTL</text>
+  <rect x="1048" y="314" width="62" height="42" rx="21" fill="#f5f5f5"/><text x="1069" y="341" class="tag">EL</text>
+  <rect x="1122" y="314" width="86" height="42" rx="21" fill="#eef7ff"/><text x="1144" y="341" class="tag-blue">JDBC</text>
+  <rect x="1220" y="314" width="88" height="42" rx="21" fill="#f5f5f5"/><text x="1238" y="341" class="tag">jQuery</text>
+  <text x="752" y="394" class="detail">MVC 요청 처리, 화면 출력, DOM 제어 및 데이터베이스 연동</text>
+
+  <!-- Database -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="465" width="610" height="235" rx="6" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="70" y="465" width="610" height="8" rx="4" fill="#1496f4"/>
+  </g>
+  <text x="102" y="515" class="label">DATABASE</text>
+  <text x="102" y="557" class="group-title">데이터베이스</text>
+  <ellipse cx="140" cy="605" rx="30" ry="12" fill="#eef7ff" stroke="#0877cf" stroke-width="3"/>
+  <path d="M110 605v35c0 7 13 12 30 12s30-5 30-12v-35M110 623c0 7 13 12 30 12s30-5 30-12" fill="#eef7ff" stroke="#0877cf" stroke-width="3"/>
+  <text x="192" y="617" class="group-title">Oracle Database</text>
+  <text x="192" y="649" class="detail">관계형 데이터 저장과 SQL 기반 조회·처리</text>
+
+  <!-- Libraries -->
+  <g filter="url(#shadow)">
+    <rect x="720" y="465" width="610" height="235" rx="6" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="720" y="465" width="610" height="8" rx="4" fill="#1496f4"/>
+  </g>
+  <text x="752" y="515" class="label">LIBRARIES &amp; DRIVER</text>
+  <text x="752" y="557" class="group-title">라이브러리 및 드라이버</text>
+  <rect x="752" y="587" width="90" height="42" rx="21" fill="#eef7ff"/><text x="773" y="614" class="tag-blue">Gson</text>
+  <rect x="854" y="587" width="102" height="42" rx="21" fill="#f5f5f5"/><text x="873" y="614" class="tag">Lombok</text>
+  <rect x="968" y="587" width="72" height="42" rx="21" fill="#f5f5f5"/><text x="989" y="614" class="tag">COS</text>
+  <rect x="1052" y="587" width="220" height="42" rx="21" fill="#eef7ff"/><text x="1074" y="614" class="tag-blue">Oracle JDBC Driver</text>
+  <text x="752" y="670" class="detail">JSON 변환, 코드 간소화, 파일 업로드 및 Oracle 연결</text>
+
+  <rect x="70" y="742" width="1260" height="5" fill="#1496f4"/>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">오늘의집 클론 프로젝트 개발 일정</title>
+  <desc id="desc">프로젝트 기획부터 테스트와 발표 준비까지 5주간의 개발 일정을 나타낸 간트 차트</desc>
+  <defs>
+    <style>
+      .title{font:800 40px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#111827}
+      .subtitle{font:400 17px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#64748b}
+      .head{font:700 16px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#fff}
+      .task{font:700 17px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#1f2937}
+      .week{font:700 16px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#334155}
+      .barText{font:700 14px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#fff}
+      .caption{font:400 14px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#64748b}
+    </style>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="820" fill="#fff"/>
+  <rect x="60" y="48" width="10" height="90" fill="#1496f4"/>
+  <text x="96" y="92" class="title">개발 일정</text>
+  <text x="96" y="125" class="subtitle">프로젝트 기획부터 통합 테스트와 발표 준비까지의 5주간 진행 과정</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="180" width="1260" height="570" rx="8" fill="#fff"/>
+  </g>
+
+  <!-- 머리글 -->
+  <path d="M78 180H1322A8 8 0 0 1 1330 188V244H70V188A8 8 0 0 1 78 180Z" fill="#0877cf"/>
+  <text x="102" y="220" class="head">개발 단계</text>
+  <text x="555" y="220" text-anchor="middle" class="head">1주차</text>
+  <text x="713" y="220" text-anchor="middle" class="head">2주차</text>
+  <text x="871" y="220" text-anchor="middle" class="head">3주차</text>
+  <text x="1029" y="220" text-anchor="middle" class="head">4주차</text>
+  <text x="1187" y="220" text-anchor="middle" class="head">5주차</text>
+
+  <!-- 행 배경 -->
+  <rect x="70" y="244" width="1260" height="84" fill="#f5f5f5"/>
+  <rect x="70" y="328" width="1260" height="84" fill="#fff"/>
+  <rect x="70" y="412" width="1260" height="84" fill="#f5f5f5"/>
+  <rect x="70" y="496" width="1260" height="84" fill="#fff"/>
+  <rect x="70" y="580" width="1260" height="84" fill="#f5f5f5"/>
+  <path d="M70 664H1330V742A8 8 0 0 1 1322 750H78A8 8 0 0 1 70 742Z" fill="#fff"/>
+
+  <!-- 단계 -->
+  <text x="102" y="295" class="task">프로젝트 기획·요구사항 분석</text>
+  <text x="102" y="379" class="task">화면 분석·데이터베이스 설계</text>
+  <text x="102" y="463" class="task">개발 환경·공통 구조 구성</text>
+  <text x="102" y="547" class="task">담당 기능 구현</text>
+  <text x="102" y="631" class="task">기능 통합·오류 해결</text>
+  <text x="102" y="715" class="task">테스트·발표 준비</text>
+
+  <!-- 주차 구분선 -->
+  <line x1="476" y1="244" x2="476" y2="750" stroke="#dce3ea"/>
+  <line x1="634" y1="244" x2="634" y2="750" stroke="#dce3ea"/>
+  <line x1="792" y1="244" x2="792" y2="750" stroke="#dce3ea"/>
+  <line x1="950" y1="244" x2="950" y2="750" stroke="#dce3ea"/>
+  <line x1="1108" y1="244" x2="1108" y2="750" stroke="#dce3ea"/>
+  <line x1="1266" y1="244" x2="1266" y2="750" stroke="#dce3ea"/>
+
+  <!-- 일정 막대 -->
+  <g>
+    <rect x="496" y="270" width="296" height="32" rx="16" fill="#0877cf"/>
+    <circle cx="512" cy="286" r="6" fill="#fff"/>
+
+    <rect x="654" y="354" width="454" height="32" rx="16" fill="#1496f4"/>
+    <circle cx="670" cy="370" r="6" fill="#fff"/>
+
+    <rect x="812" y="438" width="296" height="32" rx="16" fill="#0877cf"/>
+    <circle cx="828" cy="454" r="6" fill="#fff"/>
+
+    <rect x="812" y="522" width="454" height="32" rx="16" fill="#1496f4"/>
+    <circle cx="828" cy="538" r="6" fill="#fff"/>
+
+    <rect x="970" y="606" width="296" height="32" rx="16" fill="#0877cf"/>
+    <circle cx="986" cy="622" r="6" fill="#fff"/>
+
+    <rect x="1128" y="690" width="138" height="32" rx="16" fill="#1496f4"/>
+    <circle cx="1144" cy="706" r="6" fill="#fff"/>
+  </g>
+
+  <rect x="70" y="750" width="1260" height="5" fill="#1496f4"/>
+  <text x="70" y="790" class="caption">※ 각 단계는 병행하여 진행되었으며, 기능 구현 후 통합 및 테스트를 수행했습니다.</text>
+</svg>

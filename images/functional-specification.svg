@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">오늘의집 클론 프로젝트 기능 명세</title>
+  <desc id="desc">로그인 기능은 전체 내용을 작성하고 나머지 기능은 기능명만 남긴 기능 명세 표</desc>
+  <defs>
+    <style>
+      .title{font:800 40px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#111827}
+      .sub{font:400 17px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#64748b}
+      .th{font:700 17px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#fff}
+      .fn{font:700 17px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#111827}
+      .body{font:400 15px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#374151}
+      .guide{font:400 14px 'Malgun Gothic','Apple SD Gothic Neo',sans-serif;fill:#94a3b8}
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="#ffffff"/>
+  <rect x="60" y="48" width="10" height="90" fill="#1496f4"/>
+  <text x="96" y="92" class="title">기능 명세</text>
+  <text x="96" y="125" class="sub">담당 기능별 입력 조건, 처리 과정과 실행 결과</text>
+
+  <!-- 표 머리글 -->
+  <rect x="70" y="175" width="1260" height="64" fill="#0877cf"/>
+  <text x="105" y="215" class="th">기능</text>
+  <text x="285" y="215" class="th">입력·조건</text>
+  <text x="545" y="215" class="th">처리 내용</text>
+  <text x="1025" y="215" class="th">결과</text>
+
+  <!-- 로그인: 작성 예시 -->
+  <rect x="70" y="239" width="1260" height="104" fill="#eef7ff"/>
+  <text x="105" y="300" class="fn">로그인</text>
+  <text x="285" y="278" class="body"><tspan x="285" dy="0">아이디, 비밀번호</tspan><tspan x="285" dy="25">로그인하지 않은 상태</tspan></text>
+  <text x="545" y="266" class="body"><tspan x="545" dy="0">회원 정보를 조회하고 비밀번호를 확인한 뒤</tspan><tspan x="545" dy="25">인증에 성공하면 세션에 회원 정보를 저장한다.</tspan></text>
+  <text x="1025" y="266" class="body"><tspan x="1025" dy="0">성공 시 메인 페이지로 이동하고,</tspan><tspan x="1025" dy="25">실패 시 오류 메시지를 표시한다.</tspan></text>
+
+  <!-- 나머지 기능: 담당자가 작성할 빈 행 -->
+  <rect x="70" y="343" width="1260" height="62" fill="#ffffff"/><text x="105" y="382" class="fn">상품 탐색</text>
+  <rect x="70" y="405" width="1260" height="62" fill="#f5f5f5"/><text x="105" y="444" class="fn">상품 상세</text>
+  <rect x="70" y="467" width="1260" height="62" fill="#ffffff"/><text x="105" y="506" class="fn">장바구니</text>
+  <rect x="70" y="529" width="1260" height="62" fill="#f5f5f5"/><text x="105" y="568" class="fn">주문·결제</text>
+  <rect x="70" y="591" width="1260" height="62" fill="#ffffff"/><text x="105" y="630" class="fn">주문 상태 확인</text>
+  <rect x="70" y="653" width="1260" height="62" fill="#f5f5f5"/><text x="105" y="692" class="fn">리뷰 등록</text>
+  <rect x="70" y="715" width="1260" height="62" fill="#ffffff"/><text x="105" y="754" class="fn">판매자 가입</text>
+  <rect x="70" y="777" width="1260" height="62" fill="#f5f5f5"/><text x="105" y="816" class="fn">판매자 승인</text>
+
+  <!-- 열 구분선 -->
+  <line x1="250" y1="175" x2="250" y2="839" stroke="#d9dde3"/>
+  <line x1="510" y1="175" x2="510" y2="839" stroke="#d9dde3"/>
+  <line x1="990" y1="175" x2="990" y2="839" stroke="#d9dde3"/>
+  <rect x="70" y="839" width="1260" height="5" fill="#1496f4"/>
+</svg>
