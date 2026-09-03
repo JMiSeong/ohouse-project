@@ -33,10 +33,35 @@ const modalCaption = document.querySelector("#imageModalCaption");
 const modalCloseButton = document.querySelector("#imageModalClose");
 const expandableImages = document.querySelectorAll(".section-image");
 
+let modalImageScale = 1;
+let modalImageX = 0;
+let modalImageY = 0;
+let isModalImageDragging = false;
+let dragStartX = 0;
+let dragStartY = 0;
+
+function updateModalImageTransform() {
+  modalImage.style.transform =
+    `translate(${modalImageX}px, ${modalImageY}px) scale(${modalImageScale})`;
+  modalImage.classList.toggle("is-zoomed", modalImageScale > 1);
+}
+
+function resetModalImageZoom() {
+  modalImageScale = 1;
+  modalImageX = 0;
+  modalImageY = 0;
+  isModalImageDragging = false;
+  modalImage.classList.remove("is-dragging");
+  updateModalImageTransform();
+}
+
 function openImageModal(image) {
   modalImage.src = image.src;
   modalImage.alt = image.alt;
-  modalCaption.textContent = image.alt;
+  modalCaption.textContent =
+    `${image.alt} · 마우스 휠 확대/축소 · 드래그 이동`;
+
+  resetModalImageZoom();
 
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
@@ -44,6 +69,7 @@ function openImageModal(image) {
 }
 
 function closeImageModal() {
+  resetModalImageZoom();
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
@@ -51,6 +77,60 @@ function closeImageModal() {
   modalImage.src = "";
   modalCaption.textContent = "";
 }
+
+// 모달이 열리면 마우스 휠로 이미지를 바로 확대·축소할 수 있습니다.
+modal.addEventListener("wheel", (event) => {
+  if (!modal.classList.contains("open")) return;
+
+  event.preventDefault();
+
+  const zoomAmount = event.deltaY < 0 ? 0.2 : -0.2;
+  modalImageScale = Math.min(4, Math.max(1, modalImageScale + zoomAmount));
+
+  if (modalImageScale === 1) {
+    modalImageX = 0;
+    modalImageY = 0;
+  }
+
+  updateModalImageTransform();
+}, { passive: false });
+
+// 확대된 이미지는 마우스로 잡아 이동할 수 있습니다.
+modalImage.addEventListener("pointerdown", (event) => {
+  if (modalImageScale <= 1) return;
+
+  event.preventDefault();
+  isModalImageDragging = true;
+  dragStartX = event.clientX - modalImageX;
+  dragStartY = event.clientY - modalImageY;
+  modalImage.classList.add("is-dragging");
+  modalImage.setPointerCapture(event.pointerId);
+});
+
+modalImage.addEventListener("pointermove", (event) => {
+  if (!isModalImageDragging) return;
+
+  modalImageX = event.clientX - dragStartX;
+  modalImageY = event.clientY - dragStartY;
+  updateModalImageTransform();
+});
+
+function stopModalImageDragging(event) {
+  if (!isModalImageDragging) return;
+
+  isModalImageDragging = false;
+  modalImage.classList.remove("is-dragging");
+
+  if (modalImage.hasPointerCapture(event.pointerId)) {
+    modalImage.releasePointerCapture(event.pointerId);
+  }
+}
+
+modalImage.addEventListener("pointerup", stopModalImageDragging);
+modalImage.addEventListener("pointercancel", stopModalImageDragging);
+
+// 이미지를 더블 클릭하면 기본 배율로 돌아갑니다.
+modalImage.addEventListener("dblclick", resetModalImageZoom);
 
 expandableImages.forEach((image) => {
   image.addEventListener("click", () => {
@@ -130,4 +210,59 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeAllSubmenus();
   }
+});
+document.querySelectorAll("[data-slider]").forEach((slider) => {
+  const track = slider.querySelector(".slider-track");
+  const items = slider.querySelectorAll(".slider-item");
+  const previousButton = slider.querySelector(".slider-prev");
+  const nextButton = slider.querySelector(".slider-next");
+  const dotsContainer = slider.querySelector(".slider-dots");
+
+  let currentIndex = 0;
+
+  // 이미지 개수에 맞게 하단 점 생성
+  items.forEach((item, index) => {
+    const dot = document.createElement("button");
+
+    dot.type = "button";
+    dot.className = "slider-dot";
+    dot.setAttribute("aria-label", `${index + 1}번째 이미지 보기`);
+
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateSlider();
+    });
+
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll(".slider-dot");
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex);
+    });
+  }
+
+  previousButton.addEventListener("click", () => {
+    currentIndex =
+      currentIndex === 0
+        ? items.length - 1
+        : currentIndex - 1;
+
+    updateSlider();
+  });
+
+  nextButton.addEventListener("click", () => {
+    currentIndex =
+      currentIndex === items.length - 1
+        ? 0
+        : currentIndex + 1;
+
+    updateSlider();
+  });
+
+  updateSlider();
 });
