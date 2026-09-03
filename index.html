@@ -135,11 +135,11 @@
         </p>
 
         <h3 id="overview-period">프로젝트 기간</h3>
-        <p>2026.08.?? ~ 2026.09.07</p>
+        <p>2026.08.03 ~ 2026.09.07</p>
 
         <h3 id="overview-members">팀원</h3>
         <ul class="member-list">
-          <li>문규리</li>
+          <li>👑문규리</li>
           <li>조지훈</li>
           <li>류호훈</li>
           <li>안정빈</li>
@@ -169,10 +169,18 @@
 
       <div class="content-card">
         <h3 id="environment-dev">개발 환경</h3>
-        <p class="placeholder">개발 환경 이미지 또는 설명</p>
-
+		<img
+		  class="section-image"
+		  src="./images/development-environment.svg"
+		  alt="오늘의집 클론 프로젝트 개발 환경"
+		>
+		
         <h3 id="environment-stack">기술 스택</h3>
-        <p class="placeholder">기술 스택 이미지</p>
+        <img
+		  class="section-image"
+		  src="./images/technology-stack.svg"
+		  alt="오늘의집 클론 프로젝트 기술 스택"
+		>
 
         <h3 id="environment-url">배포 및 저장소 URL</h3>
         <ul class="link-list">
@@ -203,14 +211,45 @@
     <!-- 3. 요구사항 및 기능 명세 -->
     <section id="requirements" class="content-section">
       <h2><span>03</span>요구사항 및 기능 명세</h2>
-
-      <div class="content-card">
         <h3 id="requirements-user">요구사항 명세</h3>
-        <p class="placeholder">사용자별 요구사항 명세 이미지</p>
-
-        <h3 id="requirements-function">기능 명세</h3>
-        <p class="placeholder">기능 명세 이미지</p>
-      </div>
+        <div class="image-slider" data-slider>
+		  <div class="slider-viewport">
+		    <div class="slider-track">
+		      <div class="slider-item">
+		        <img class="section-image"
+				     src="./images/requirements-user.svg"
+				     alt="일반 사용자 요구사항 명세">
+		        <span class="slider-caption">사용자</span>
+		      </div>
+		
+		      <div class="slider-item">
+		        <img class="section-image"
+				     src="./images/requirements-seller.svg"
+				     alt="판매자 요구사항 명세">
+		        <span class="slider-caption">판매자</span>
+		      </div>
+		
+		      <div class="slider-item">
+		        <img class="section-image"
+				     src="./images/requirements-admin.svg"
+				     alt="관리자 요구사항 명세">
+		        <span class="slider-caption">관리자</span>
+		      </div>
+		    </div>
+		
+		    <button class="slider-button slider-prev" type="button" aria-label="이전 이미지" > ‹ </button>
+		    <button class="slider-button slider-next" type="button" aria-label="다음 이미지"> › </button>
+		  </div>
+		
+		  <div class="slider-dots" aria-label="이미지 선택"></div>
+		</div>
+        
+        <h3 id="requirements-function">주요 기능 명세</h3>
+        <img
+		  class="section-image"
+		  src="./images/functional-specification.svg"
+		  alt="오늘의집 클론 프로젝트 기능 명세"
+		>
     </section>
 
     <!-- 4. 프로젝트 진행 과정 -->
@@ -219,10 +258,30 @@
 
       <div class="content-card">
         <h3 id="schedule-role">역할 분담</h3>
-        <p class="placeholder">팀원별 역할 분담 이미지 또는 설명</p>
+        <img
+		  class="section-image"
+		  src="./images/role-assignment.svg"
+		  alt="오늘의집 클론 프로젝트 역할 분담"
+		>
+		<div class="common-work-container">
+		  <h4>공통 작업</h4>
+		
+		  <ul>
+		    <li>프로젝트 기획 및 구현 범위 선정</li>
+		    <li>요구사항 분석</li>
+		    <li>데이터베이스 설계 및 ERD 검토</li>
+		    <li>Git을 이용한 코드 관리 및 통합</li>
+		    <li>기능 통합 테스트와 오류 수정</li>
+		    <li>발표 자료 제작 및 시연 준비</li>
+		  </ul>
+		</div>
 
         <h3 id="schedule-timeline">개발 일정</h3>
-        <p class="placeholder">개발 일정 차트 또는 타임라인</p>
+        <img
+		  class="section-image"
+		  src="./images/development-timeline.svg"
+		  alt="오늘의집 클론 프로젝트 개발 일정"
+		>
       </div>
     </section>
 
@@ -231,17 +290,53 @@
       <h2><span>05</span>데이터베이스 모델링</h2>
 
       <div class="content-card">
-        <h3 id="database-all">전체 ERD</h3>
-        <p class="placeholder">전체 ERD 이미지</p>
-
-        <h3 id="database-member">회원 영역</h3>
-        <p class="placeholder">회원 영역 ERD 이미지</p>
-
-        <h3 id="database-product">상품 영역</h3>
-        <p class="placeholder">상품 영역 ERD 이미지</p>
-
-        <h3 id="database-order">주문 및 결제 영역</h3>
-        <p class="placeholder">주문 및 결제 영역 ERD 이미지</p>
+        <h3 id="database-all">ERD</h3>
+        <div class="image-slider" data-slider>
+		  <div class="slider-viewport">
+		    <div class="slider-track">
+		      <div class="slider-item">
+		        <img
+		          class="section-image"
+		          src="./images/example1.png"
+		          alt="첫 번째 화면"
+		        >
+		        <span class="slider-caption">전체</span>
+		      </div>
+		
+		      <div class="slider-item">
+		        <img
+		          class="section-image"
+		          src="./images/example2.png"
+		          alt="두 번째 화면"
+		        >
+		        <span class="slider-caption">회원</span>
+		      </div>
+		
+		      <div class="slider-item">
+		        <img
+		          class="section-image"
+		          src="./images/example3.png"
+		          alt="세 번째 화면"
+		        >
+		        <span class="slider-caption">상품</span>
+		      </div>
+		      
+		      <div class="slider-item">
+		        <img
+		          class="section-image"
+		          src="./images/example3.png"
+		          alt="세 번째 화면"
+		        >
+		        <span class="slider-caption">주문 및 결제</span>
+		      </div>
+		    </div>
+		
+		    <button class="slider-button slider-prev" type="button" aria-label="이전 이미지" > ‹ </button>
+		    <button class="slider-button slider-next" type="button" aria-label="다음 이미지"> › </button>
+		  </div>
+		
+		  <div class="slider-dots" aria-label="이미지 선택"></div>
+		</div>
       </div>
     </section>
 
@@ -413,22 +508,51 @@
     </footer>
   </main>
 
-  <!-- 이미지 전체 화면 확대 모달 -->
-  <div class="image-modal" id="imageModal" aria-hidden="true">
-    <button class="image-modal-close"
-            id="imageModalClose"
-            type="button"
-            aria-label="확대 이미지 닫기">
-      &times;
-    </button>
-
-    <img class="image-modal-content"
-         id="imageModalContent"
-         src=""
-         alt="확대 이미지">
-
-    <p class="image-modal-caption" id="imageModalCaption"></p>
-  </div>
+	<!-- 이미지 전체 화면 확대 모달 -->
+	<div
+	  class="image-modal"
+	  id="imageModal"
+	  aria-hidden="true"
+	>
+	  <button
+	    class="image-modal-close"
+	    id="imageModalClose"
+	    type="button"
+	    aria-label="확대 이미지 닫기"
+	  >
+	    &times;
+	  </button>
+	
+	  <button
+	    class="image-modal-button image-modal-prev"
+	    id="imageModalPrev"
+	    type="button"
+	    aria-label="이전 이미지"
+	  >
+	    ‹
+	  </button>
+	
+	  <img
+	    class="image-modal-content"
+	    id="imageModalContent"
+	    src=""
+	    alt="확대 이미지"
+	  >
+	
+	  <button
+	    class="image-modal-button image-modal-next"
+	    id="imageModalNext"
+	    type="button"
+	    aria-label="다음 이미지"
+	  >
+	    ›
+	  </button>
+	
+	  <p
+	    class="image-modal-caption"
+	    id="imageModalCaption"
+	  ></p>
+	</div>
 
   <script src="./js/main.js"></script>
 </body>
